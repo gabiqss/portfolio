@@ -14,28 +14,35 @@ body {
 
 /* Estilos para o cabeçalho */
 header {
+    display: flex;
+    justify-content: center; /* Isso separa os elementos no header */
+    align-items: center;
     background-color: #333;
     color: #ffffff;
     padding: 15px;
-    justify-content: center;
-    align-items: center;
-    display: grid;
     border-radius: 10px;
     z-index: 1000;
     position: fixed;
     width: 95%;
 }
 
-
+.nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Isso centraliza os elementos de navegação */
+}
 
 .sobre {
     display: block;
 }
-nav ul {
-    list-style: none;
-    padding: 0;
-}
 
+
+.nav a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 0 10px; /* Espaçamento entre os links */
+}
 /* Adicione ao seu arquivo style.css */
 nav ul a {
     transition: color 0.3s ease;
@@ -97,8 +104,7 @@ a:hover {
 footer {
     padding: 15px;
     text-align: center;
-    position: fixed;
-    width: 95%;
+    width: 100%;
     bottom: 0;
     border-radius: 10px;
     background-color: #333333;
@@ -241,3 +247,4 @@ footer.modo-escuro {
 .rede-social-container a:hover {
     text-decoration: none;
 }
+
