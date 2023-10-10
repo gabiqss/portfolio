@@ -26,6 +26,8 @@ header {
     width: 95%;
 }
 
+
+
 .sobre {
     display: block;
 }
@@ -99,6 +101,8 @@ footer {
     width: 95%;
     bottom: 0;
     border-radius: 10px;
+    background-color: #333333;
+    color: #fff;
 }
 
 .fab.fa-github,
@@ -138,7 +142,9 @@ footer {
 
 .tec {
     display: flex;
-    padding: 10px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 10px 0;
 }
 
 body.modo-escuro {
