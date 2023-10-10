@@ -39,6 +39,7 @@ nav ul a {
     transition: color 0.3s ease;
     position: relative;
     text-decoration: none;
+    color: #fff; /* Adicionado para garantir que a cor seja sempre branca */
 }
 
 nav ul a::after {
@@ -66,11 +67,6 @@ nav ul a:hover {
 nav ul li {
     display: inline;
     margin-right: 10px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
 }
 
 /* Estilos para as seções */
@@ -105,22 +101,14 @@ footer {
     border-radius: 10px;
 }
 
-.fab.fa-github {
+.fab.fa-github,
+.fab.fa-linkedin {
     color: #000000; /* Substitua com a cor desejada */
 }
 
-
-.fab.fa-linkedin {
-    color: #000000;
-}
-
-.fab.fa-github.modo-escuro {
-    color: #ffffff; /* Substitua com a cor desejada */
-}
-
-
+.fab.fa-github.modo-escuro,
 .fab.fa-linkedin.modo-escuro {
-    color: #ffffff;
+    color: #ffffff; /* Substitua com a cor desejada */
 }
 
 .icon-container {
@@ -151,19 +139,18 @@ footer {
 .tec {
     display: flex;
     padding: 10px;
-
 }
 
 body.modo-escuro {
     background-color: #000;
     color: #fff;
-    
 }
 
 footer.modo-escuro {
     background-color: #222;
     color: #fff;
 }
+
 /* Adicione aqui outras regras de estilo para o modo escuro */
 /* Estilos para o botão de modo escuro */
 #modo-escuro {
@@ -180,12 +167,12 @@ footer.modo-escuro {
 
 .fa-solid.fa-angle-up {
     color: #000;
-    
 }
+
 .fa-solid.fa-angle-up.modo-escuro {
     color: #ffffff;
-    
 }
+
 .fa-solid.fa-circle-half-stroke {
     color: black;
 }
@@ -214,20 +201,19 @@ footer.modo-escuro {
 }
 
 .rede-social-container i {
-    font-size: 2em; /* Tamanho do ícone (ajuste conforme necessário) */
-     /* Adicione este estilo de borda */
-    padding: 10px; /* Adicione algum preenchimento para afastar o texto da borda */
-    /* Isso faz com que a borda fique arredondada */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 20px;
+    font-size: 2em;
     padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; /* Adicionado o efeito de transição na borda */
+    border: 20px;
 }
-
 
 .rede-social-container i:hover {
     transform: scale(1.1);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-color: #ffffff; /* Alterado para a cor branca (ou a cor desejada) */
 }
+
+
 .rede-social-container p {
     font-size: 1.2em;
     font-weight: bold;
