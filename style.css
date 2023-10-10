@@ -15,8 +15,7 @@ body {
 /* Estilos para o cabeçalho */
 header {
     display: flex;
-    justify-content: center; /* Isso separa os elementos no header */
-    align-items: center;
+    justify-content: center;
     background-color: #333;
     color: #ffffff;
     padding: 15px;
@@ -24,7 +23,25 @@ header {
     z-index: 1000;
     position: fixed;
     width: 95%;
+    
 }
+
+@media (max-width: 768px) {
+    header {
+      flex-direction: column; /* Altera a direção para coluna em telas menores */
+      align-items: center; /* Alinha os itens ao centro */
+      padding: 10px; /* Ajuste o padding conforme necessário */
+    }
+  
+    .nav ul {
+      margin-bottom: 10px; /* Adiciona espaço entre os links de navegação e o elemento usuario */
+    }
+  
+    .usuario {
+      order: -1; /* Move o elemento usuario para o início da coluna */
+      margin-top: 10px; /* Adiciona espaço entre os links de navegação e o elemento usuario */
+    }
+  }
 
 .nav ul {
     list-style: none;
