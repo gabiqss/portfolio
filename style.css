@@ -163,8 +163,8 @@ footer.modo-escuro {
     cursor: pointer;
     transition: transform 0.2s;
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 150px;
+    right: 25px;
 }
 
 #modo-escuro.ativo {
