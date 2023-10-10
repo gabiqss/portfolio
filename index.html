@@ -5,43 +5,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gabriela - Portfólio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap">
 </head>
 
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="">Início</a></li>
-                <li><a href="#section2">Seção 2</a></li>
-                <li><a href="#section3">Seção 3</a></li>
-                <li><a href="#formacao">Formação</a></li>
-                <li><a href="#experiencias">Experiências</a></li>
-                <li><a href="#contatos">Contatos</a></li>
+                <a href="">Início</a> |
+                <a href="#sobre-mim">Sobre mim</a> |
+                <a href="#formacao">Formação</a> |
+                <a href="#experiencias">Experiências</a> |
+                <a href="#tecnologias">Tecnologias</a> |
+                <a href="#social">Social</a> 
+                <i id="modo-escuro" class="fa-solid fa-circle-half-stroke"></i>
+                
+                
+
             </ul>
         </nav>
     </header>
-
-    <section id="section1">
-        <h1>Seção 1</h1>
-        <p>Conteúdo da seção 1...</p>
+    
+    <br>
+    <section class="sobre" id="sobre-mim">
+        <h1>Sobre mim</h1>
+        <h4>olá, meu nome é Gabriela e eu sou estudante de análise e desenvolvimento de sistemas. Sou desenvolvedora back-end
+            na área web e utilizo Python, Django, HTML, CSS e JS. Atualmente estou trabalhando, mas você pode conhecer um pouco
+            sobre meus títulos abaixo :)
+        </h4>
     </section>
 
-    <section id="section2">
-        <h1>Seção 2</h1>
-        <p>Conteúdo da seção 2...</p>
+    <section id="formacao">
+        <h1>Formações e certificações</h1>
+        <h2>Análise e Desenvolvimento de Sistemas</h2>
+        <h3>Tipo: Graduação - Faculdade Descomplica</h3>
+        <h4>Início: Out/2023</h4>
+        <h4>Conclusão: Abr/2026</h4>
+        <h5>Atualmente no primeiro período</h5>
+        <h2>Desenvolvimento de Sistemas</h2>
+        <h3>Tipo: Certificação de 200h horas - SENAC</h3>
+        <h4>Início: Jun/2023</h4>
+        <h4>Conclusão: Set/20263</h4>
+        <h5>Curso focado em desenvolvimento web com Django</h5>
     </section>
 
-    <section id="Contatos">
-        <h1>Contatos</h1>
-        <a href="https://github.com/gabiqss">
-            <i class="fab fa-github"></i>
-        </a>
+    <section id="experiencias">
+        <h1>Experiências</h1>
+        <h2>Desenvolvedora web full-stack</h2>
+        <h3>Empresa: Proglogic</h3>
+        <h4>Início: Out/2023</h4>
+        <h4>Atual profissão</h4>
+        <h5>Desenvolvo websites utilizando Python e o framework Django,
+            além de utilizar ferramentas como HTML5, CSS3 e Javascript.
+        </h5>
     </section>
 
+    <section id="tecnologias">
+        <h1>Tecnologias</h1>
+        <div class="tec">
+        <div class="icon-container">
+            <i class="fab fa-python fa-2x"></i>
+            <p>Python</p>
+        </div>
+        
+        <div class="icon-container">
+            <i class="fab fa-html5 fa-2x"></i>
+            <p>HTML5</p>
+        </div>
+        
+        <div class="icon-container">
+            <i class="fab fa-css3-alt fa-2x"></i>
+            <p>CSS3</p>
+        </div>
+        
+        <div class="icon-container">
+            <i class="fab fa-js fa-2x"></i>
+            <p>JavaScript</p>
+        </div>
+        
+        <div class="icon-container">
+            <i class="fab fa-linux fa-2x"></i>
+            <p>Linux</p>
+        </div>
+
+        <div class="icon-container">
+            <i class="fab fa-git fa-2x"></i>
+            <p>Git</p>
+        </div>
+    </div>
+
+    </section>
+
+    <section class="social" id="social">
+        <h1>Social</h1>
+        <div class="rede-social-container">
+            <a href="https://github.com/gabiqss">
+                <i class="fab fa-github fa-2x"></i>
+                
+            </a>
+        
+            <a href="https://www.linkedin.com/in/gabriela-queiroz-3175a7284/">
+                <i class="fab fa-linkedin fa-2x"></i>
+                
+            </a>
+        </div>
+    </section>
+    
+    
+    <i id="icone-scroll" class="fa-solid fa-angle-up"></i>
+ 
     <footer>
-        <p>&copy; 2023 - Desenvolvido por Gabriela</p>
+        <p>&copy; 2023 - Desenvolvido por Gabriela Queiroz</p>
+        
+        <i id="modo-escuro" class="fa-solid fa-circle-half-stroke"></i>
+        
     </footer>
 
     <script src="script.js"></script>

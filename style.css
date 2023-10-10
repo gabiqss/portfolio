@@ -7,22 +7,61 @@
 
 /* Estilos gerais para o corpo da página */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inconsolata', monospace;
     line-height: 1.6;
+    padding: 2%;
 }
 
 /* Estilos para o cabeçalho */
 header {
     background-color: #333;
-    color: #fff;
-    padding: 10px 0;
+    color: #ffffff;
+    padding: 15px;
     justify-content: center;
+    align-items: center;
+    display: grid;
+    border-radius: 10px;
+    z-index: 1000;
+    position: fixed;
+    width: 95%;
 }
 
+.sobre {
+    display: block;
+}
 nav ul {
     list-style: none;
     padding: 0;
 }
+
+/* Adicione ao seu arquivo style.css */
+nav ul a {
+    transition: color 0.3s ease;
+    position: relative;
+    text-decoration: none;
+}
+
+nav ul a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff; /* Cor do sublinhado */
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+nav ul a:hover {
+    color: #ffffff; /* Altere a cor conforme desejado */
+}
+
 
 nav ul li {
     display: inline;
@@ -37,6 +76,8 @@ nav ul li a {
 /* Estilos para as seções */
 section {
     padding: 50px 0;
+    border: #000000;
+    border-color: #000000;
 }
 
 section h1 {
@@ -46,21 +87,165 @@ section h1 {
 
 /* Estilos para links */
 a {
-    color: #007BFF;
+    color: #ffffff;
     text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 /* Estilos para o rodapé */
 footer {
-    background-color: #f8f8f8;
     padding: 20px 0;
     text-align: center;
     position: fixed;
-    width: 100%;
+    width: 95%;
     bottom: 0;
+    border-radius: 10px;
 }
 
+.fab.fa-github {
+    color: #000000; /* Substitua com a cor desejada */
+}
+
+
+.fab.fa-linkedin {
+    color: #000000;
+}
+
+.fab.fa-github.modo-escuro {
+    color: #ffffff; /* Substitua com a cor desejada */
+}
+
+
+.fab.fa-linkedin.modo-escuro {
+    color: #ffffff;
+}
+
+.icon-container {
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+    border: 20px;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.icon-container i {
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.icon-container p {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.icon-container:hover {
+    background-color: #f0f0f0; /* Altere a cor conforme desejado */
+}
+
+.tec {
+    display: flex;
+    padding: 10px;
+
+}
+
+body.modo-escuro {
+    background-color: #000;
+    color: #fff;
+    
+}
+
+footer.modo-escuro {
+    background-color: #222;
+    color: #fff;
+}
+/* Adicione aqui outras regras de estilo para o modo escuro */
+/* Estilos para o botão de modo escuro */
+#modo-escuro {
+    cursor: pointer;
+    transition: transform 0.2s;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+#modo-escuro.ativo {
+    transform: scale(1.1);
+}
+
+.fa-solid.fa-angle-up {
+    color: #000;
+    
+}
+.fa-solid.fa-angle-up.modo-escuro {
+    color: #ffffff;
+    
+}
+.fa-solid.fa-circle-half-stroke {
+    color: black;
+}
+
+.fa-solid.fa-circle-half-stroke.modo-escuro {
+    color: rgb(255, 255, 255);
+}
+
+#icone-scroll {
+    position: fixed;
+    bottom: 200px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 2em; /* Tamanho do ícone (ajuste conforme necessário) */
+}
+
+.rede-social-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); /* Isso cria uma grade flexível */
+    gap: 10px; /* Espaço entre os ícones */
+    justify-items: center; /* Centraliza os ícones horizontalmente */
+    align-items: center; /* Centraliza os ícones verticalmente */
+    margin-bottom: 10px; /* Espaço entre a seção "Social" e os ícones */
+    border: 20px;
+    padding: 10px;
+}
+
+.rede-social-container i {
+    font-size: 2em; /* Tamanho do ícone (ajuste conforme necessário) */
+     /* Adicione este estilo de borda */
+    padding: 10px; /* Adicione algum preenchimento para afastar o texto da borda */
+    /* Isso faz com que a borda fique arredondada */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 20px;
+    padding: 10px;
+}
+
+
+.rede-social-container i:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.rede-social-container p {
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px;
+    color: #000;
+    text-align: center;
+    margin: 0; /* Para remover margens padrão */
+}
+
+.rede-social-container.modo-escuro p {
+    color: white;
+}
+
+.rede-social-container a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.rede-social-container a:hover {
+    text-decoration: none;
+}
