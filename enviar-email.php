@@ -5,16 +5,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $mensagem = $_POST["mensagem"];
     
-    $to = "gabiqss1@gmail.com"
-    $subject = "Assunto: $assunto";
-    $message = "Nome: $nome\nEmail: $email\n\nMensagem:\n$mensagem";
-    
-    $headers = "From: $email";
-    
-    if (mail($to, $subject, $message, $headers)) {
-        echo "Mensagem enviada com sucesso!";
+    if (empty($nome) || empty($assunto) || empty($email) || empty($mensagem)) {
+        echo "Por favor, preencha todos os campos do formulário.";
     } else {
-        echo "Ocorreu um erro ao enviar a mensagem.";
+        $to = "gabiqss1@gmail.com";
+        $subject = "Assunto: $assunto";
+        $message = "Nome: $nome\nEmail: $email\n\nMensagem:\n$mensagem";
+        
+        $headers = "From: $email";
+        
+        if (mail($to, $subject, $message, $headers)) {
+            echo "Mensagem enviada com sucesso!";
+        } else {
+            echo "Ocorreu um erro ao enviar a mensagem.";
+        }
     }
 }
 ?>
