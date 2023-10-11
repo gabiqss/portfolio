@@ -254,6 +254,7 @@ footer.modo-escuro {
     cursor: pointer;
     font-size: 1.5em;
     justify-content: center;
+    max-width: fit-content;
     
 }
 
@@ -346,6 +347,13 @@ footer.modo-escuro {
     color: white;
 }
 
+
+
+.header-container {
+    margin: 0 auto; /* Centraliza a div na página */
+}
+
+
 body {
     display: flex;
     flex-direction: column;
@@ -354,14 +362,6 @@ body {
     min-height: 100vh;
     margin: 0;
 }
-
-header {
-
-}
-.header-container {
-    margin: 0 auto; /* Centraliza a div na página */
-}
-
 
 .container {
     display: flex;
@@ -375,10 +375,12 @@ header {
     border-bottom: 0;
     border-style: dashed;
     padding: 0px 10px;
-    box-sizing: border-box;
     width: 100%;
     max-width: 800px; /* Define uma largura máxima opcional */
+    flex-grow: 1; /* Faz com que a div se expanda para ocupar o espaço restante */
 }
+
+
 
 .container.modo-escuro {
     border: solid white;
