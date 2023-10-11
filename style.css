@@ -326,4 +326,10 @@ footer.modo-escuro {
     font-size: 0.9em;
 }
 
+.project h2 {
+    color: black;
+}
 
+.project h2.modo-escuro {
+    color: white;
+}
