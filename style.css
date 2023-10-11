@@ -292,3 +292,38 @@ footer.modo-escuro {
     text-decoration: none;
 }
 
+#portfolio {
+    overflow: hidden;
+}
+
+.projects-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.project {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: start;
+    min-width: 25%;
+}
+
+.project img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.project h2 {
+    margin: 10px 0;
+}
+
+.project p {
+    font-size: 0.9em;
+}
+
+
