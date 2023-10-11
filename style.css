@@ -471,3 +471,73 @@ form input,
 form textarea {
     margin-bottom: 10px;
 }
+
+/* Estilos para o rótulo */
+form label.modo-escuro {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #fff; /* Modo escuro */
+}
+
+/* Estilos para os campos de entrada de texto e textarea */
+form input[type="text"].modo-escuro,
+form input[type="email"].modo-escuro,
+form textarea.modo-escuro {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #333; /* Modo escuro */
+    color: #fff; /* Modo escuro */
+}
+
+/* Estilos para o textarea */
+form textarea.modo-escuro {
+    resize: vertical;
+}
+
+/* Estilos para o botão de envio */
+form input[type="submit"].modo-escuro {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 50%;
+}
+
+/* Efeito hover para o botão de envio */
+form input[type="submit"].modo-escuro:hover {
+    background-color: #073b00;
+    width: 50%;
+    transform: scale(0.9);
+    transition: 0.2s;
+}
+
+/* Estilos para o contêiner do formulário */
+form.modo-escuro {
+    max-width: 500px;
+    margin: auto;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Adicionando um pouco de espaço entre os campos */
+form input.modo-escuro,
+form textarea.modo-escuro {
+    margin-bottom: 10px;
+}
+
+.foto {
+    width: 150px;
+    height: 150px;
+    border-radius: 1000px;
+    border: #000 solid;
+    
+}
