@@ -23,7 +23,7 @@
                 <a href="#formacao">Formação</a>
                 <a href="#experiencias">Experiência</a>
                 <a href="#tecnologias">Tecnologias</a>
-                <a href="#social">Social</a>
+                <a href="#social">Contato</a>
                 
             </ul>
         </nav>
@@ -38,14 +38,26 @@
     <section class="sobre" id="sobre-mim">
         <h1>Sobre mim</h1>
         <h4>olá, meu nome é Gabriela e eu sou estudante de análise e desenvolvimento de sistemas. Sou desenvolvedora back-end
-            na área web e utilizo Python, Django, HTML, CSS e JS. Atualmente estou trabalhando, mas você pode conhecer um pouco
-            sobre meus títulos abaixo :)
+            na área web e atualmente estou trabalhando, utilizando <span class="destaque">Python, Django, HTML, CSS e JS</span> como ferramentas. Comecei na área da programação
+            quando caí de paraquedas em um curso em junho de 2023 (há <span id="tempo-programacao"></span>) sem saber qualquer coisa e acabei me apaixonando!
+            
         </h4>
+        <div class="rede-social-container">
+
+            <a href="https://github.com/gabiqss" target="_blank">
+                <i class="fab fa-github fa-2x"></i>
+            </a>
+        
+            <a href="https://www.linkedin.com/in/gabriela-queiroz-3175a7284/" target="_blank">
+                <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+
+        </div>
     </section>
 
     <section id="portfolio">
         <h1>Portfólio</h1>
-        <h3>Pequenos projetos utilizando HTML, CSS e JavaScript, para diferentes propósitos</h3>
+        <h3>Pequenos projetos utilizando HTML, CSS e JavaScript.</h3>
 
         <div class="project">
             <img src="images/conversor.jpeg" alt="Projeto 2">
@@ -120,18 +132,19 @@
     </section>
 
     <section class="social" id="social">
-        <h1>Social</h1>
-        <div class="rede-social-container">
-
-            <a href="https://github.com/gabiqss" target="_blank">
-                <i class="fab fa-github fa-2x"></i>
-            </a>
+        <h1>Contato</h1>
+        <form action="enviar-email.php" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required><br>
+            <label for="assunto">Assunto:</label>
+            <input type="text" id="assunto" name="assunto" required><br>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required><br>
+            <label for="mensagem">Mensagem:</label><br>
+            <textarea id="mensagem" name="mensagem" rows="4" cols="50" required></textarea><br>
+            <input type="submit" value="Enviar">
+        </form>
         
-            <a href="https://www.linkedin.com/in/gabriela-queiroz-3175a7284/" target="_blank">
-                <i class="fab fa-linkedin fa-2x"></i>
-            </a>
-
-        </div>
     </section>
 
     

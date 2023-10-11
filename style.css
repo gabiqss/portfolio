@@ -258,13 +258,21 @@ footer.modo-escuro {
     
 }
 
+.destaque {
+
+        text-decoration: underline;
+        text-decoration-color: rgb(0, 0, 0); /* Define a cor do sublinhado */
+        text-decoration-thickness: 2px; /* Define a espessura do sublinhado */
+    }
+    
+
+
 .rede-social-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); /* Isso cria uma grade flexível */
     gap: 10px; /* Espaço entre os ícones */
     justify-items: center; /* Centraliza os ícones horizontalmente */
     align-items: center; /* Centraliza os ícones verticalmente */
-    margin-bottom: 10px; /* Espaço entre a seção "Social" e os ícones */
     border: 20px;
     padding: 10px;
 }
@@ -274,6 +282,8 @@ footer.modo-escuro {
     padding: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; /* Adicionado o efeito de transição na borda */
     border: 20px;
+    border-radius: 30px;
+    justify-items: center;
 }
 
 .rede-social-container i:hover {
@@ -405,4 +415,59 @@ footer {
     border-radius: 10px;
     background-color: #333333;
     color: #fff;
+}
+
+/* Estilos para os campos do formulário */
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 50%;
+}
+
+form input[type="submit"]:hover {
+    background-color: #073b00;
+    width: 50%;
+    transform: scale(0.9);
+    transition: 0.2s;
+
+}
+
+/* Estilos para o contêiner do formulário */
+form {
+    max-width: 500px;
+    margin: auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Adicionando um pouco de espaço entre os campos */
+form input,
+form textarea {
+    margin-bottom: 10px;
 }

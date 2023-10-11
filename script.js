@@ -105,3 +105,24 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const dataInicio = new Date('2023-06-26'); // Defina a data de início
+    const dataAtual = new Date();
+    const diffAnos = dataAtual.getFullYear() - dataInicio.getFullYear();
+    const diffMeses = dataAtual.getMonth() - dataInicio.getMonth();
+
+    let textoTempo;
+
+    if (diffAnos > 0) {
+        textoTempo = `${diffAnos} ${diffAnos === 1 ? 'ano' : 'anos'}`;
+        if (diffMeses > 0) {
+            textoTempo += ` e ${diffMeses} ${diffMeses === 1 ? 'mês' : 'meses'}`;
+        }
+    } else {
+        textoTempo = `${diffMeses} ${diffMeses === 1 ? 'mês' : 'meses'}`;
+    }
+
+    const elementoTempo = document.getElementById('tempo-programacao');
+    elementoTempo.textContent = textoTempo;
+});
