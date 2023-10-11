@@ -310,7 +310,7 @@ footer.modo-escuro {
     max-width: 300px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     scroll-snap-align: start;
-    min-width: 25%;
+    min-width: 33%;
 }
 
 .project img {
