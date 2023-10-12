@@ -639,6 +639,7 @@ form textarea.modo-escuro {
     font-family: 'Inconsolata', monospace; /* Change the font if needed */
     /* Add some space around the switcher */
     max-width: fit-content;
+    display: grid;
     
 }
 
