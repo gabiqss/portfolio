@@ -1,4 +1,3 @@
-// Adicione no seu arquivo script.js
 const elementosComSombra = document.querySelectorAll('.icon-container');
 
 elementosComSombra.forEach(elemento => {
@@ -11,7 +10,6 @@ elementosComSombra.forEach(elemento => {
     });
 });
 
-// Adicione no seu arquivo script.js
 const elementosComEscala = document.querySelectorAll('.icon-container');
 
 elementosComEscala.forEach(elemento => {
@@ -23,7 +21,6 @@ elementosComEscala.forEach(elemento => {
         elemento.style.transform = 'scale(1)';
     });
 });
-
 
 document.addEventListener('DOMContentLoaded', function() {
     const modoEscuroBtn = document.getElementById('modo-escuro');
@@ -94,8 +91,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Adicione este código ao final do seu arquivo script.js
-
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -107,7 +102,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    const dataInicio = new Date('2023-06-26'); // Defina a data de início
+    const dataInicio = new Date('2023-06-26');
     const dataAtual = new Date();
     const diffAnos = dataAtual.getFullYear() - dataInicio.getFullYear();
     const diffMeses = dataAtual.getMonth() - dataInicio.getMonth();
@@ -127,7 +122,6 @@ document.addEventListener('DOMContentLoaded', function() {
     elementoTempo.textContent = textoTempo;
 });
 
-
 window.addEventListener('scroll', function() {
     var icon = document.getElementById('icone-scroll');
 
@@ -138,10 +132,8 @@ window.addEventListener('scroll', function() {
     } else if (window.scrollY <= 100 && !icon.classList.contains('fadeOutAnimation')) {
         icon.classList.remove('fadeInAnimation');
         icon.classList.add('fadeOutAnimation');
-          // Aguarda a animação de fadeOut antes de esconder completamente
     }
 });
-
 
 function trocarIdioma(idioma) {
     if (idioma === 'pt-br') {
@@ -163,9 +155,8 @@ function trocarIdioma(idioma) {
     document.getElementById('idioma').value = idioma;
 }
 
-
 document.addEventListener('DOMContentLoaded', function() {
-    const dataInicio = new Date('2023-06-26'); // Defina a data de início
+    const dataInicio = new Date('2023-06-26');
     const dataAtual = new Date();
     const diffAnos = dataAtual.getFullYear() - dataInicio.getFullYear();
     const diffMeses = dataAtual.getMonth() - dataInicio.getMonth();
@@ -185,23 +176,11 @@ document.addEventListener('DOMContentLoaded', function() {
     elementoTempo.textContent = textoTempo;
 });
 
-
-
 document.addEventListener('DOMContentLoaded', function () {
-    // Define the start date and end date of the course
-    var startDate = new Date('2023-10-16'); // Oct/2023
-    var endDate = new Date('2026-04-01'); // Apr/2026
-
-    // Calculate the current date
-    var currentDate = new Date();
-
-    // Calculate the difference in months
+    var startDate = new Date('2023-10-16');
+    var endDate = new Date('2026-04-01');
     var diffMonths = (endDate.getFullYear() - startDate.getFullYear()) * 12 + (endDate.getMonth() - startDate.getMonth());
-
-    // Calculate the current semester
     var currentSemester = Math.floor(diffMonths / 6) + 1;
-
-    // Update the text
     var semesterPtBr = document.getElementById('semester-pt-br');
     var semesterEn = document.getElementById('semester-en');
 
@@ -212,15 +191,10 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function getSemesterName(semester, language) {
-    // Define an array of semester names
-    console.log("script is running")
     const semesterNames = {
-        'pt-br': ['quinto', 'quarto', 'terceiro', 'segundo', 'primeiro'], // Reversed order
-        'en': ['fifth', 'fourth', 'third', 'second', 'first'] // Reversed order
+        'pt-br': ['quinto', 'quarto', 'terceiro', 'segundo', 'primeiro'],
+        'en': ['fifth', 'fourth', 'third', 'second', 'first']
     };
-    
 
-    // Return the corresponding semester name based on the language
-    return semesterNames[language][semester -1]; // Adjust index (0-based)
+    return semesterNames[language][semester -1];
 }
-
