@@ -204,3 +204,40 @@ function displayTimeDifference() {
 // Call the displayTimeDifference function when the page loads
 window.addEventListener('DOMContentLoaded', displayTimeDifference);
 
+document.addEventListener('DOMContentLoaded', function () {
+    // Define the start date and end date of the course
+    var startDate = new Date('2023-10-16'); // Oct/2023
+    var endDate = new Date('2026-04-01'); // Apr/2026
+
+    // Calculate the current date
+    var currentDate = new Date();
+
+    // Calculate the difference in months
+    var diffMonths = (endDate.getFullYear() - startDate.getFullYear()) * 12 + (endDate.getMonth() - startDate.getMonth());
+
+    // Calculate the current semester
+    var currentSemester = Math.floor(diffMonths / 6) + 1;
+
+    // Update the text
+    var semesterPtBr = document.getElementById('semester-pt-br');
+    var semesterEn = document.getElementById('semester-en');
+
+    if (semesterPtBr && semesterEn) {
+        semesterPtBr.textContent = getSemesterName(currentSemester, 'pt-br');
+        semesterEn.textContent = getSemesterName(currentSemester, 'en');
+    }
+});
+
+function getSemesterName(semester, language) {
+    // Define an array of semester names
+    console.log("script is running")
+    const semesterNames = {
+        'pt-br': ['quinto', 'quarto', 'terceiro', 'segundo', 'primeiro'], // Reversed order
+        'en': ['fifth', 'fourth', 'third', 'second', 'first'] // Reversed order
+    };
+    
+
+    // Return the corresponding semester name based on the language
+    return semesterNames[language][semester -1]; // Adjust index (0-based)
+}
+
