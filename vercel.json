@@ -1,0 +1,8 @@
+{
+    "functions": {
+      "enviar-email.php": {
+        "runtime": "vercel-php@0.5.2"
+      }
+    }
+  }
+
