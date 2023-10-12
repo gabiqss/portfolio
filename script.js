@@ -143,4 +143,58 @@ window.addEventListener('scroll', function() {
 });
 
 
-    
+function trocarIdioma(idioma) {
+    if (idioma === 'pt-br') {
+        document.querySelectorAll('.pt-br').forEach(element => {
+            element.style.display = 'block';
+        });
+        document.querySelectorAll('.en').forEach(element => {
+            element.style.display = 'none';
+        });
+    } else if (idioma === 'en') {
+        document.querySelectorAll('.pt-br').forEach(element => {
+            element.style.display = 'none';
+        });
+        document.querySelectorAll('.en').forEach(element => {
+            element.style.display = 'block';
+        });
+    }
+}
+
+
+ // Calculate the time difference between now and the specified date
+ function getTimeDifference(startDate) {
+    const now = new Date();
+    const start = new Date(startDate);
+    const diff = now - start;
+
+    return {
+        years: Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25)),
+        months: Math.floor((diff % (1000 * 60 * 60 * 24 * 365.25)) / (1000 * 60 * 60 * 24 * 30.44)),
+    };
+}
+
+// Display the time difference
+function displayTimeDifference() {
+    const programmingTime = document.getElementById('programming-time');
+    const startDate = new Date('2023-06-26'); // Replace with your start date
+
+    const timeDifference = getTimeDifference(startDate);
+
+    let displayText = '';
+    if (timeDifference.years > 0) {
+        displayText += `${timeDifference.years} ${timeDifference.years === 1 ? 'year' : 'years'}`;
+    }
+    if (timeDifference.years > 0 && timeDifference.months > 0) {
+        displayText += ' and ';
+    }
+    if (timeDifference.months > 0) {
+        displayText += `${timeDifference.months} ${timeDifference.months === 1 ? 'month' : 'months'}`;
+    }
+
+    programmingTime.textContent = `${displayText}`;
+}
+
+// Call the displayTimeDifference function when the page loads
+window.addEventListener('DOMContentLoaded', displayTimeDifference);
+

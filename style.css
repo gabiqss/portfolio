@@ -634,3 +634,31 @@ form textarea.modo-escuro {
     border: #ff25ac solid;
     
 }
+
+.idioma-switch {
+    font-family: 'Inconsolata', monospace; /* Change the font if needed */
+    /* Add some space around the switcher */
+    max-width: fit-content;
+    
+}
+
+/* Style the select element */
+#idioma {
+    font-family: 'Inconsolata', monospace;
+    padding: 0px; /* Adjust padding as needed */
+    font-size: 17px; /* Adjust font size as needed */
+    border: 0; /* Add a border */
+    border-radius: 5px; /* Add some border radius */
+    background-color: #333; /* Set the background color */
+    color: #ffffff;
+}
+
+/* Style the options inside the select element */
+#idioma option {
+    font-family: 'Inconsolata', monospace;
+    background-color: #fff; /* Set the background color */
+    color: #000000; /* Set the text color */
+}
+
+/* Optional: Add some hover effect for options */
+

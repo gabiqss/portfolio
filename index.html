@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <title>Gabriela – Portfólio</title>
     <link rel="icon" type="image/x-icon" href="heart-regular.ico">
@@ -18,19 +17,41 @@
     <div class="container">
         <div class="header-container">
     <header>
-        <nav class="nav">
+        <nav class="nav pt-br">
             <ul>
-                <a href="#sobre-mim">Sobre mim</a>
+                <a href="#sobre-mim-pt-br">Sobre mim</a>
                 <a href="#tecnologias">Tecnologias</a>
-                <a href="#portfolio">Portfólio</a>
-                <a href="#experiencias">Experiência</a>
-                <a href="#formacao">Formação</a>
-                
-                
+                <a href="#portfolio-pt-br">Portfólio</a>
+                <a href="#experiencias-pt-br">Experiência</a>
+                <a href="#formacao-pt-br">Formação</a>
+                <div class="idioma-switch">
+                    <select id="idioma" onchange="trocarIdioma(this.value)">
+                      <option value="pt-br">Português</option>
+                      <option value="en">English</option>
+                    </select>
+                </div>
                 <!--<a href="#social">Contato</a>-->
                 
             </ul>
         </nav>
+        <nav class="nav en" style="display: none;">
+            <ul>
+                <a href="#sobre-mim-en">About Me</a>
+                <a href="#tecnologias">Technology</a>
+                <a href="#portfolio-en">Portfolio</a>
+                <a href="#experiencias-en">Experience</a>
+                <a href="#formacao-en">Education</a>
+                <div class="idioma-switch">
+                    <select id="idioma" onchange="trocarIdioma(this.value)">
+                      <option value="pt-br">Português</option>
+                      <option value="en">English</option>
+                    </select>
+                </div>
+                <!--<a href="#social">Contato</a>-->
+                
+            </ul>
+        </nav>
+        
     </header>
     <i id="icone-scroll" class="fa-solid fa-angle-up hidden"></i>
 
@@ -40,7 +61,7 @@
     
     <br>
     
-    <section class="sobre" id="sobre-mim">
+    <section class="sobre pt-br" id="sobre-mim-pt-br">
         <h1>Sobre mim</h1>
         <img class="foto" src="images/foto.jpg" alt="">
         <h4>Olá! Meu nome é Gabriela e sou uma estudante de análise e desenvolvimento de sistemas. Atualmente, estou 
@@ -66,9 +87,37 @@
 
         </div>
     </section>
+    <section class="sobre en" style="display: none;" id="sobre-mim-en">
+        <h1>About me</h1>
+        <img class="foto" src="images/foto.jpg" alt="">
+        <h4>Hello! My name is Gabriela and I am a student of systems analysis and development. Currently, I am 
+            focused on back-end web development, using <span class="highlight">Python, Django, HTML, CSS, and JS</span> 
+            as my main tools. My journey in programming started unexpectedly when I began a systems development course in 
+            June 2023 (About <span id="programming-time"></span>). Since then, I have grown to love solving problems 
+            through code. In my free time, I enjoy playing games and sometimes even programming. Oh, and most importantly, 
+            I'm a pet mom.
+        </h4>   
+        <br>
+        <h2>GitHub, LinkedIn, and Resume</h2>
+        <div class="rede-social-container">
+
+            <a href="https://github.com/gabiqss" target="_blank">
+                <i class="fab fa-github fa-2x"></i>
+            </a>
+        
+            <a href="https://www.linkedin.com/in/gabriela-queiroz-3175a7284/" target="_blank">
+                <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+            <a href="Gabriela_Queiroz_CV.pdf" target="_blank">
+                <i class="fa-solid fa-file fa-2x"></i>
+            </a>
+
+        </div>
+    </section>
 
     <section id="tecnologias">
-        <h1>Tecnologias</h1>
+        <h1 class="pt-br">Tecnologias</h1>
+        <h1 class="en" style="display: none;">Technology</h1>
         <div class="tec">
 
         <div class="icon-container">
@@ -108,7 +157,7 @@
     </div>
     </section>
 
-    <section id="portfolio">
+    <section class="pt-br" id="portfolio-pt-br">
         <h1>Portfólio</h1>
         <h3>Pequenos projetos utilizando HTML, CSS e JavaScript.</h3>
 
@@ -121,7 +170,21 @@
         <!-- Adicione mais projetos conforme necessário -->
     </section>
 
-    <section id="experiencias">
+    <section class="en" style="display: none;" id="portfolio-en">
+        <h1>Portfolio</h1>
+        <h3>Small projects using HTML, CSS, and JavaScript.</h3>
+    
+        <div class="project">
+            <img src="images/conversor.jpeg" alt="Project 2">
+            <a href="https://gabiqss.github.io/conversor-de-moedas/" target="_blank"><h2>Currency Converter</h2></a>
+            <p>Currency Converter made with JavaScript, HTML, and CSS, along with an API integration.</p>
+        </div>
+        
+        <!-- Add more projects as needed -->
+    </section>
+    
+
+    <section class="pt-br" id="experiencias-pt-br">
         <h1>Experiências</h1>
         <h2>Desenvolvedora web full-stack</h2>
         <h3>Proglogic</h3>
@@ -132,7 +195,17 @@
         </h5>
     </section>
 
-    <section id="formacao">
+    <section class="en" style="display: none;" id="experiencias-en">
+        <h1>Experience</h1>
+        <h2>Full-stack Web Developer</h2>
+        <h3>Proglogic</h3>
+        <h4>Start Date: Oct/2023</h4>
+        <h4>Current Position</h4>
+        <h5>I develop systems using Python and the Django framework, as well as utilizing tools like HTML5, CSS3, and Javascript.</h5>
+    </section>
+    
+
+    <section class="pt-br" id="formacao-pt-br">
         <h1>Formações e certificações</h1>
         <h2>Análise e Desenvolvimento de Sistemas</h2>
         <h3>Graduação - Faculdade Descomplica (Em andamento)</h3>
@@ -146,6 +219,24 @@
         <h4>Conclusão: Set/2023</h4>
         <h5>Curso focado em desenvolvimento web com Django</h5>
     </section>
+
+    <section class="en" style="display: none;" id="formacao-en">
+        <h1>Educations and Certifications</h1>
+        
+        <h2>Analysis and Systems Development</h2>
+        <h3>Undergraduate - Descomplica College (In progress)</h3>
+        <h4>Start Date: Oct/2023</h4>
+        <h4>Expected Graduation: Apr/2026</h4>
+        <h5>Currently in the first semester</h5>
+        <br>
+    
+        <h2>Systems Development</h2>
+        <h3>200-hour Certification - SENAC (Completed)</h3>
+        <h4>Start Date: Jun/2023</h4>
+        <h4>Completion Date: Sep/2023</h4>
+        <h5>Course focused on web development with Django</h5>
+    </section>
+    
 <!--
     <section class="social" id="social">
         <h1>Contato</h1>
@@ -165,10 +256,14 @@
 -->
     
 
-    <footer>
+    <footer class="pt-br">
         <p>&copy; <script>document.write(new Date().getFullYear());</script> - Desenvolvido por <a href="#sobre-mim">Gabriela Queiroz</a></p>
         
     </footer>
+    <footer class="en" style="display: none;">
+        <p>&copy; <script>document.write(new Date().getFullYear());</script> - Developed by <a href="#sobre-mim">Gabriela Queiroz</a></p>
+    </footer>
+    
     </div>
 
     <script src="script.js"></script>
