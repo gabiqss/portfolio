@@ -24,6 +24,7 @@
                 <a href="#portfolio-pt-br">Portfólio</a>
                 <a href="#experiencias-pt-br">Experiência</a>
                 <a href="#formacao-pt-br">Formação</a>
+                <a href="#social-pt-br">Contato</a>
                 <div class="idioma-switch">
                     <select id="idioma" onchange="trocarIdioma(this.value)">
                         <option value="pt-br">Português 🇧🇷</option>
@@ -33,7 +34,7 @@
                 
                 
                 
-                <!--<a href="#social">Contato</a>-->
+                <!---->
                 
             </ul>
         </nav>
@@ -44,13 +45,14 @@
                 <a href="#portfolio-en">Portfolio</a>
                 <a href="#experiencias-en">Experience</a>
                 <a href="#formacao-en">Education</a>
+                <a href="#social-en">Contact</a>
                 <div class="idioma-switch">
                     <select id="idioma" onchange="trocarIdioma(this.value)">
                       <option value="pt-br">Português 🇧🇷</option>
                       <option value="en">English 🇺🇸</option>
                     </select>
                 </div>
-                <!--<a href="#social">Contato</a>-->
+                
                 
             </ul>
         </nav>
@@ -249,7 +251,7 @@
         <h5>Course focused on web development with Django</h5>
     </section>
     
-    <section class="social" id="social">
+    <section class="social pt-br" id="social-pt-br">
         <h1>Contato</h1>
         <form action="enviar-email.php" method="POST">
             <label for="nome">Nome:</label>
@@ -261,6 +263,22 @@
             <label for="mensagem">Mensagem:</label><br>
             <textarea id="mensagem" name="mensagem" rows="4" cols="50" required></textarea><br>
             <input type="submit" value="Enviar">
+        </form>
+    
+    </section> 
+
+    <section class="social en" style="display: none;" id="social-en">
+        <h1>Contact</h1>
+        <form action="enviar-email.php" method="POST">
+            <label for="nome">Name:</label>
+            <input type="text" id="nome" name="nome" required><br>
+            <label for="assunto">Subject:</label>
+            <input type="text" id="assunto" name="assunto" required><br>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required><br>
+            <label for="mensagem">Message:</label><br>
+            <textarea id="mensagem" name="mensagem" rows="4" cols="50" required></textarea><br>
+            <input type="submit" value="Submit">
         </form>
     
     </section> 
