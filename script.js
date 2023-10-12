@@ -159,7 +159,13 @@ function trocarIdioma(idioma) {
             element.style.display = 'block';
         });
     }
+
+    document.getElementById('idioma').value = idioma;
 }
+
+
+
+
 
 
  // Calculate the time difference between now and the specified date
