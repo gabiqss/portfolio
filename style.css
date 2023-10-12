@@ -324,7 +324,12 @@ footer.modo-escuro {
         text-decoration-color: rgb(0, 0, 0); /* Define a cor do sublinhado */
         text-decoration-thickness: 2px; /* Define a espessura do sublinhado */
     }
-    
+.destaque.modo-escuro {
+
+        text-decoration: underline;
+        text-decoration-color: rgb(255, 255, 255); /* Define a cor do sublinhado */
+        text-decoration-thickness: 2px; /* Define a espessura do sublinhado */
+    }
 
 
 .rede-social-container {
@@ -469,6 +474,7 @@ footer.modo-escuro {
     transform-origin: bottom right;
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
+
 
 
 .project p a:hover::after {
