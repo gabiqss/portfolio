@@ -187,12 +187,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
-
-
-// Call the displayTimeDifference function when the page loads
-window.addEventListener('DOMContentLoaded', displayTimeDifference);
-
 document.addEventListener('DOMContentLoaded', function () {
     // Define the start date and end date of the course
     var startDate = new Date('2023-10-16'); // Oct/2023
