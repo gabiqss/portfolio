@@ -164,42 +164,31 @@ function trocarIdioma(idioma) {
 }
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    const dataInicio = new Date('2023-06-26'); // Defina a data de início
+    const dataAtual = new Date();
+    const diffAnos = dataAtual.getFullYear() - dataInicio.getFullYear();
+    const diffMeses = dataAtual.getMonth() - dataInicio.getMonth();
 
+    let textoTempo;
 
-
-
- // Calculate the time difference between now and the specified date
- function getTimeDifference(startDate) {
-    const now = new Date();
-    const start = new Date(startDate);
-    const diff = now - start;
-
-    return {
-        years: Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25)),
-        months: Math.floor((diff % (1000 * 60 * 60 * 24 * 365.25)) / (1000 * 60 * 60 * 24 * 30.44)),
-    };
-}
-
-// Display the time difference
-function displayTimeDifference() {
-    const programmingTime = document.getElementById('programming-time');
-    const startDate = new Date('2023-06-26'); // Replace with your start date
-
-    const timeDifference = getTimeDifference(startDate);
-
-    let displayText = '';
-    if (timeDifference.years > 0) {
-        displayText += `${timeDifference.years} ${timeDifference.years === 1 ? 'year' : 'years'}`;
-    }
-    if (timeDifference.years > 0 && timeDifference.months > 0) {
-        displayText += ' and ';
-    }
-    if (timeDifference.months > 0) {
-        displayText += `${timeDifference.months} ${timeDifference.months === 1 ? 'month' : 'months'}`;
+    if (diffAnos > 0) {
+        textoTempo = `${diffAnos} ${diffAnos === 1 ? 'year' : 'years'}`;
+        if (diffMeses > 0) {
+            textoTempo += ` e ${diffMeses} ${diffMeses === 1 ? 'month' : 'months'}`;
+        }
+    } else {
+        textoTempo = `${diffMeses} ${diffMeses === 1 ? 'month' : 'months'}`;
     }
 
-    programmingTime.textContent = `${displayText}`;
-}
+    const elementoTempo = document.getElementById('programming-time');
+    elementoTempo.textContent = textoTempo;
+});
+
+
+
+
+
 
 // Call the displayTimeDifference function when the page loads
 window.addEventListener('DOMContentLoaded', displayTimeDifference);
