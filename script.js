@@ -126,3 +126,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const elementoTempo = document.getElementById('tempo-programacao');
     elementoTempo.textContent = textoTempo;
 });
+
+
+window.addEventListener('scroll', function() {
+    var icon = document.getElementById('icone-scroll');
+
+    if (window.scrollY > 100 && !icon.classList.contains('fadeInAnimation')) {
+        icon.classList.remove('fadeOutAnimation');
+        icon.classList.add('fadeInAnimation');
+        icon.classList.remove('hidden');
+    } else if (window.scrollY <= 100 && !icon.classList.contains('fadeOutAnimation')) {
+        icon.classList.remove('fadeInAnimation');
+        icon.classList.add('fadeOutAnimation');
+          // Aguarda a animação de fadeOut antes de esconder completamente
+    }
+});
+
+
+    
