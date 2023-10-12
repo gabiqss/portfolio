@@ -167,9 +167,10 @@ footer a:hover {
     display: grid;
     flex-direction: column;
     align-items: center;
-    border: 20px;
     padding: 10px;
-    transition: background-color 0.3s ease;
+    transition: color 0.3s ease;
+    margin: 0;
+    border: none;
 }
 
 .icon-container i {
@@ -183,7 +184,7 @@ footer a:hover {
 }
 
 .icon-container:hover {
-    background-color: #ff25ac; /* Altere a cor conforme desejado */
+    color: #ff25ac; /* Altere a cor conforme desejado */
 }
 
 .tec {
@@ -228,8 +229,17 @@ footer.modo-escuro {
     border-width: 0.3px;
 }
 
+.fa-solid.fa-angle-up:hover {
+    color: #ff25ac;
+    transition: 0.3s;
+    transform: scale(1.2);
+}
 
-
+.fa-solid.fa-angle-up.modo-escuro:hover {
+    color: #ff25ac;
+    transition: 0.3s;
+    transform: scale(1.2);
+}
 
 .fa-solid.fa-angle-up {
     color: #000;
@@ -269,6 +279,15 @@ footer.modo-escuro {
     display: none;
 }
 
+.pro
+
+.destaque.modo-escuro {
+
+    text-decoration: underline;
+    text-decoration-color: rgb(255, 255, 255); /* Define a cor do sublinhado */
+    text-decoration-thickness: 2px; /* Define a espessura do sublinhado */
+}
+
 #icone-scroll {
     position: fixed;
     cursor: pointer;
@@ -290,20 +309,17 @@ footer.modo-escuro {
 
 .fab.fa-linkedin.fa-2x, .fab.fa-github.fa-2x, .fa-solid.fa-file.fa-2x {
     font-size: 2em;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; /* Adicionado o efeito de transição na borda */
-    border: 20px;
+    transition: transform 0.3s ease, color 0.3s ease; /* Adicionado o efeito de transição na borda */
     border-radius: 30px;
     justify-items: center;
 }
 
 .fab.fa-linkedin.fa-2x:hover, .fab.fa-github.fa-2x:hover, .fa-solid.fa-file.fa-2x:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 10px #ff25ac;
-    border-color: #ff25ac; /* Alterado para a cor branca (ou a cor desejada) */
+    color: #ff25ac; /* Alterado para a cor branca (ou a cor desejada) */
 }
 
 .destaque {
-
         text-decoration: underline;
         text-decoration-color: rgb(0, 0, 0); /* Define a cor do sublinhado */
         text-decoration-thickness: 2px; /* Define a espessura do sublinhado */
@@ -316,46 +332,27 @@ footer.modo-escuro {
     grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); /* Isso cria uma grade flexível */
     justify-items: center; /* Centraliza os ícones horizontalmente */
     align-items: center; /* Centraliza os ícones verticalmente */
-    border: 20px;
     padding: 10px;
 }
 
 .rede-social-container i {
     font-size: 2em;
     padding: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; /* Adicionado o efeito de transição na borda */
-    border: 20px;
-    border-radius: 30px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
     justify-items: center;
 }
 
 .rede-social-container i:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 10px #ff25ac;
-    border-color: #ff25ac; /* Alterado para a cor branca (ou a cor desejada) */
 }
 
-
-.rede-social-container p {
-    font-size: 1.2em;
-    font-weight: bold;
-    padding: 10px;
-    color: #000;
-    text-align: center;
-    margin: 0; /* Para remover margens padrão */
-}
 
 .rede-social-container.modo-escuro p {
     color: white;
 }
 
 .rede-social-container a {
-    text-decoration: none;
     color: inherit;
-}
-
-.rede-social-container a:hover {
-    text-decoration: none;
 }
 
 #portfolio {
@@ -379,10 +376,7 @@ footer.modo-escuro {
     min-width: 33%;
 }
 
-.project:hover {
-    transform: scale(1.1);
-    transition: 0.3s;
-}
+
 
 .project img {
     max-width: 100%;
@@ -442,6 +436,51 @@ footer.modo-escuro {
     color: white;
 }
 
+
+.project p a{
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.project p a.modo-escuro{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.project p a:hover {
+    color: #ff25ac;
+    transition: 0.3s;
+}
+
+.project p a.modo-escuro:hover {
+    color: #ff25ac;
+    transition: 0.3s;
+}
+
+.project p a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ff25ac; /* Cor do sublinhado */
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+
+.project p a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.project p a {
+    transition: color 0.3s ease;
+    position: relative;
+    text-decoration: none;
+}
 
 
 .header-container {
@@ -600,7 +639,7 @@ form input[type="submit"].modo-escuro:hover {
     background-color: #073b00;
     width: 50%;
     transform: scale(0.9);
-    transition: 0.2s;
+    transition: 0.3s;
 }
 
 /* Estilos para o contêiner do formulário */
@@ -642,6 +681,18 @@ form textarea.modo-escuro {
     display: grid;
     
 }
+.project a i {
+    color: #000;
+}
+
+.fa-solid.fa-code:hover {
+    color: #ff25ac;
+    transition: 0.3s;
+}
+
+.project a i.modo-escuro {
+    color: #ffffff;
+}
 
 /* Style the select element */
 #idioma {
@@ -663,3 +714,7 @@ form textarea.modo-escuro {
 
 /* Optional: Add some hover effect for options */
 
+.fa-solid.fa-code {
+    border: 0;
+    width: fit-content;
+}
